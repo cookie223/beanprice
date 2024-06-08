@@ -97,6 +97,8 @@ class Source(source.Source):
                 'to_currency': base,
             }
             data = _do_fetch(params)
+            if ['Realtime Currency Exchange Rate'] not in price_data:
+                print(price_data)
 
             price_data = data['Realtime Currency Exchange Rate']
             price = Decimal(price_data['5. Exchange Rate'])
