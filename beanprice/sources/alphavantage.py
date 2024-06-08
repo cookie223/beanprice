@@ -84,7 +84,7 @@ class Source(source.Source):
             }
             data = _do_fetch(params)
             
-            if ['Global Quote'] not in data:
+            if 'Global Quote' not in data:
                 print(data)
 
             price_data = data['Global Quote']
@@ -97,7 +97,7 @@ class Source(source.Source):
                 'to_currency': base,
             }
             data = _do_fetch(params)
-            if ['Realtime Currency Exchange Rate'] not in data:
+            if 'Realtime Currency Exchange Rate' not in data:
                 print(data)
 
             price_data = data['Realtime Currency Exchange Rate']
