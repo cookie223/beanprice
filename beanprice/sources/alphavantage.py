@@ -83,6 +83,9 @@ class Source(source.Source):
                 'symbol': symbol,
             }
             data = _do_fetch(params)
+            
+            if ['Global Quote'] not in price_data:
+                print(price_data)
 
             price_data = data['Global Quote']
             price = Decimal(price_data['05. price'])
