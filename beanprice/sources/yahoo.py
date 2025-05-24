@@ -140,7 +140,7 @@ class Source(source.Source):
             }
         )
         # This populates the correct cookies in the session
-        self.session.get("https://fc.yahoo.com")
+        self.session.get("https://guce.yahoo.com/consent")
         self.crumb = self.session.get(
             "https://query1.finance.yahoo.com/v1/test/getcrumb"
         ).text
